@@ -29,7 +29,7 @@ public class BenDayBloomEffectComponent : VolumeComponent, IPostProcessComponent
 
     public bool IsActive()
     {
-        return true;
+        return active;
     }
 
     public bool IsTileCompatible()

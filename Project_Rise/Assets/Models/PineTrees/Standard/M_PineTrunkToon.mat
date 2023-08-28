@@ -97,6 +97,7 @@ Material:
     - _ShadowBand_Length: 0
     - _SrcBlend: 1
     - _Surface: 0
+    - _UseAO: 1
     - _ZTest: 4
     - _ZWrite: 1
     - _ZWriteControl: 0

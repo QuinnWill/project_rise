@@ -64,30 +64,30 @@ public class CustomPostProcessPass : ScriptableRenderPass
     {
         VolumeStack stack = VolumeManager.instance.stack;
         m_bloomEffect = stack.GetComponent<BenDayBloomEffectComponent>();
-          CommandBuffer cmd = CommandBufferPool.Get();
-        
-            using (new ProfilingScope(cmd, new ProfilingSampler("Custom Post Process Effects")))
+        CommandBuffer cmd = CommandBufferPool.Get();
+        bool bloomActive = m_bloomEffect.IsActive();
+        using (new ProfilingScope(cmd, new ProfilingSampler("Custom Post Process Effects")))
+        {
+                
+            if (bloomActive)
             {
-                bool bloomActive = m_bloomEffect.IsActive();
-                if (bloomActive)
-                {
 
-                    SetupBloom(cmd, m_CameraColorTarget);
+                SetupBloom(cmd, m_CameraColorTarget);
 
-                    //setup composite values
+                //setup composite values
 
-                    m_compositeMaterial.SetFloat("_Cutoff", m_bloomEffect.dotsCutoff.value);
-                    m_compositeMaterial.SetFloat("_Density", m_bloomEffect.dotsDensity.value);
-                    m_compositeMaterial.SetVector("_Direction", m_bloomEffect.scrollDirection.value);
+                m_compositeMaterial.SetFloat("_Cutoff", m_bloomEffect.dotsCutoff.value);
+                m_compositeMaterial.SetFloat("_Density", m_bloomEffect.dotsDensity.value);
+                m_compositeMaterial.SetVector("_Direction", m_bloomEffect.scrollDirection.value);
 
-                    Blitter.BlitCameraTexture(cmd, m_CameraColorTarget, m_CameraColorTarget, m_compositeMaterial, 0);
-                }
+                Blitter.BlitCameraTexture(cmd, m_CameraColorTarget, m_CameraColorTarget, m_compositeMaterial, 0);
             }
+        }
 
-            context.ExecuteCommandBuffer(cmd);
-            cmd.Clear();
+        context.ExecuteCommandBuffer(cmd);
+        cmd.Clear();
 
-            CommandBufferPool.Release(cmd);
+        CommandBufferPool.Release(cmd);
     }
 
     public override void OnCameraSetup(CommandBuffer cmd, ref RenderingData renderingData)

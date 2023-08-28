@@ -15,10 +15,10 @@ public class CustomPostProcessRenderFeature : ScriptableRendererFeature
     private Material m_bloomMaterial;
     private Material m_compositeMaterial;
 
-    private CustomPostProcessPass m_customPass;
+    private CustomPostProcessPass m_pass;
     public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
     {
-        renderer.EnqueuePass(m_customPass);
+        renderer.EnqueuePass(m_pass);
     }
 
     public override void Create()
@@ -26,17 +26,15 @@ public class CustomPostProcessRenderFeature : ScriptableRendererFeature
         m_bloomMaterial = CoreUtils.CreateEngineMaterial(m_bloomShader);
         m_compositeMaterial = CoreUtils.CreateEngineMaterial(m_compositeShader);
 
-        m_customPass = new CustomPostProcessPass(m_bloomMaterial, m_compositeMaterial);
+        m_pass = new CustomPostProcessPass(m_bloomMaterial, m_compositeMaterial);
     }
 
     public override void SetupRenderPasses(ScriptableRenderer renderer, in RenderingData renderingData)
     {
-        if (renderingData.cameraData.cameraType == CameraType.Game || renderingData.cameraData.cameraType == CameraType.SceneView)
-        {
-            m_customPass.ConfigureInput(ScriptableRenderPassInput.Depth);
-            m_customPass.ConfigureInput(ScriptableRenderPassInput.Color);
-            m_customPass.SetTarget(renderer.cameraColorTargetHandle, renderer.cameraDepthTargetHandle);
-        }
+        Debug.Log(renderingData.cameraData.cameraType);
+        m_pass.ConfigureInput(ScriptableRenderPassInput.Depth);
+        m_pass.ConfigureInput(ScriptableRenderPassInput.Color);
+        m_pass.SetTarget(renderer.cameraColorTargetHandle, renderer.cameraDepthTargetHandle);
     }
 
     protected override void Dispose(bool disposing)

@@ -337,7 +337,7 @@
     "m_StencilDepthFailOperation": 0,
     "m_DepthWrite": false,
     "m_depthWriteMode": 0,
-    "m_AllowMaterialOverride": true,
+    "m_AllowMaterialOverride": false,
     "m_DepthTestMode": 0
 }
 
@@ -451,6 +451,31 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.ColorRGBAMaterialSlot",
+    "m_ObjectId": "0e8d60fb64e84168be34e753401a6f5d",
+    "m_Id": 2,
+    "m_DisplayName": "Output",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Output",
+    "m_StageCapability": 2,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 1.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
 }
 
 {
@@ -1010,10 +1035,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -562.2470703125,
-            "y": 59.75296401977539,
-            "width": 208.0,
-            "height": 302.0
+            "x": -594.9999389648438,
+            "y": -18.999942779541017,
+            "width": 207.99990844726563,
+            "height": 301.99993896484377
         }
     },
     "m_Slots": [
@@ -1324,7 +1349,7 @@
             "m_Id": "4e9f1cd3f3ac430aba6c409561293ac4"
         },
         {
-            "m_Id": "c0b962b6a6d64081b5663abe1f8ba619"
+            "m_Id": "0e8d60fb64e84168be34e753401a6f5d"
         }
     ],
     "synonyms": [
@@ -1572,10 +1597,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1432.0,
-            "y": 509.0,
+            "x": -1428.0,
+            "y": 509.0000305175781,
             "width": 208.0,
-            "height": 278.0
+            "height": 277.9999694824219
         }
     },
     "m_Slots": [
@@ -1646,31 +1671,6 @@
         "e32": 0.0,
         "e33": 1.0
     }
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.ColorRGBAMaterialSlot",
-    "m_ObjectId": "c0b962b6a6d64081b5663abe1f8ba619",
-    "m_Id": 2,
-    "m_DisplayName": "Output",
-    "m_SlotType": 1,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Output",
-    "m_StageCapability": 2,
-    "m_Value": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 1.0
-    },
-    "m_DefaultValue": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 0.0
-    },
-    "m_Labels": []
 }
 
 {

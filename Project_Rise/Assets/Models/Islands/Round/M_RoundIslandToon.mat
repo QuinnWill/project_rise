@@ -89,6 +89,8 @@ Material:
     - _Fresnel_Power: 0.1
     - _Lightband_Length: 0.4
     - _Lighting_Cutoff: 0
+    - _LineDensity: 60
+    - _LineThickness: 0.343
     - _MAIN_LIGHT_SHADOWS_CASCADE: 0
     - _NormalStrength: 1
     - _QueueControl: 0
@@ -97,10 +99,12 @@ Material:
     - _ShadowBand_Length: 0
     - _SrcBlend: 1
     - _Surface: 0
+    - _UseAO: 1
     - _ZTest: 4
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
+    - _AO_Color: {r: 0.23380208, g: 0.32666433, b: 0.6981132, a: 0}
     - _AmbientColor: {r: 0.7028302, g: 0.8748758, b: 1, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []

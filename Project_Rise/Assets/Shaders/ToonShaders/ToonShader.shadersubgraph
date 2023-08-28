@@ -37,7 +37,14 @@
             "m_Id": "f1f1c6f5a9a8489b8a289ba0cb806886"
         }
     ],
-    "m_Keywords": [],
+    "m_Keywords": [
+        {
+            "m_Id": "f1261ba8198f4d5f9664cda1817d6860"
+        },
+        {
+            "m_Id": "79a1e7b3444840c39322f049c8abdfe3"
+        }
+    ],
     "m_Dropdowns": [],
     "m_CategoryData": [
         {
@@ -5497,6 +5504,12 @@
         },
         {
             "m_Id": "f1f1c6f5a9a8489b8a289ba0cb806886"
+        },
+        {
+            "m_Id": "f1261ba8198f4d5f9664cda1817d6860"
+        },
+        {
+            "m_Id": "79a1e7b3444840c39322f049c8abdfe3"
         }
     ]
 }
@@ -5696,6 +5709,31 @@
     "m_Property": {
         "m_Id": "d52c2003b917440d9e5de154d1f7e3fa"
     }
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.ShaderKeyword",
+    "m_ObjectId": "79a1e7b3444840c39322f049c8abdfe3",
+    "m_Guid": {
+        "m_GuidSerialized": "e3fee8cf-59e4-4b7d-95bb-a47e37e973ca"
+    },
+    "m_Name": "MainLightShadowCascade",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "MainLightShadowCascade",
+    "m_DefaultReferenceName": "_MAINLIGHTSHADOWCASCADE",
+    "m_OverrideReferenceName": "_MAIN_LIGHT_SHADOWS_CASCADE",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_KeywordType": 0,
+    "m_KeywordDefinition": 1,
+    "m_KeywordScope": 1,
+    "m_KeywordStages": 2,
+    "m_Entries": [],
+    "m_Value": 0,
+    "m_IsEditable": true
 }
 
 {
@@ -8772,6 +8810,31 @@
         "x": -3378.548095703125,
         "y": -2385.310302734375
     }
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.ShaderKeyword",
+    "m_ObjectId": "f1261ba8198f4d5f9664cda1817d6860",
+    "m_Guid": {
+        "m_GuidSerialized": "044af280-bf98-4641-a173-9e99f235791c"
+    },
+    "m_Name": "MainLightShadows",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "MainLightShadows",
+    "m_DefaultReferenceName": "_MAINLIGHTSHADOWS",
+    "m_OverrideReferenceName": "_MAIN_LIGHT_SHADOWS",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_KeywordType": 0,
+    "m_KeywordDefinition": 1,
+    "m_KeywordScope": 1,
+    "m_KeywordStages": 2,
+    "m_Entries": [],
+    "m_Value": 0,
+    "m_IsEditable": true
 }
 
 {
