@@ -8,6 +8,8 @@ using UnityEngine.Rendering.Universal;
 public class BenDayBloomEffectComponent : VolumeComponent, IPostProcessComponent
 {
     [Header("Bloom Settings")]
+    public BoolParameter Toggle = new BoolParameter(false);
+
     public FloatParameter threshold = new FloatParameter(0.9f, true);
 
     public FloatParameter intensity = new FloatParameter(1, true);
@@ -29,7 +31,7 @@ public class BenDayBloomEffectComponent : VolumeComponent, IPostProcessComponent
 
     public bool IsActive()
     {
-        return active;
+        return Toggle.value;
     }
 
     public bool IsTileCompatible()
